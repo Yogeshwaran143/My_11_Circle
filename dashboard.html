@@ -1,0 +1,149 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body class="background">
+    <center>
+    <h1>My 11 Circle</h1>
+    <hr>
+    <h2>INDIA VS SRILANKA</h2>
+    <h2>SCOREBOARD</h2>
+    <table class="table">
+      <tr>
+        <th>BATSMAN</th>
+        <th>R</th>
+        <th>B</th>
+        <th>4s</th>
+        <th>6s</th>
+        <th>SR</th>
+      </tr>
+      <tbody id = "playersTable"></tbody>
+    </table>
+  </center>
+</body>
+
+<script>
+  myFunction();
+  function myFunction() {
+      const players = [
+        {
+          "BATSMAN":"KL Rahul",
+          "R":93,
+          "B":64,
+          "4s":6,
+          "6s":64.0,
+          "Link": "https://en.wikipedia.org/wiki/KL_Rahul",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Rohit Sharma",
+          "R":40,
+          "B":31,
+          "4s":3,
+          "6s":31,
+          "Link": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Virat kolhi",
+          "R":66,
+          "B":22,
+          "4s":2,
+          "6s":2,
+          "Link": "https://en.wikipedia.org/wiki/Virat_Kohli",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Ravindra Jadeja",
+          "R":47,
+          "B":12,
+          "4s":1,
+          "6s":2,
+          "Link": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Hardik Pandiya",
+          "R":39,
+          "B":50,
+          "4s":4,
+          "6s":2,
+          "Link": "https://en.wikipedia.org/wiki/Hardik_Pandya",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Dhawan",
+          "R":33,
+          "B":10,
+          "4s":5,
+          "6s":0,
+          "Link": "https://en.wikipedia.org/wiki/Shikhar_Dhawan",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Ashiwin",
+          "R":95,
+          "B":61,
+          "4s":8,
+          "6s":4,
+          "Link": "https://en.wikipedia.org/wiki/Ravichandran_Ashwin",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"D Karthik",
+          "R":86,
+          "B":122,
+          "4s":8,
+          "6s":4,
+          "Link": "https://en.wikipedia.org/wiki/Dinesh_Karthik",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Umesh",
+          "R":69,
+          "B":72,
+          "4s":12,
+          "6s":2,
+          "Link": "https://en.wikipedia.org/wiki/Umesh_Yadav",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Rahane ",
+          "R":41,
+          "B":50,
+          "4s":2,
+          "6s":2,
+          "Link": "https://en.wikipedia.org/wiki/Ajinkya_Rahane",
+          "wicket":"wicket by ",
+        },
+        {
+          "BATSMAN":"Ishant",
+          "R":75,
+          "B":40,
+          "4s":2,
+          "6s":2,
+          "Link": "https://en.wikipedia.org/wiki/Ishant_Sharma",
+          "wicket":"wicket by ",
+        },
+      ]
+      let eachPlayer = "";
+      players.forEach((each) => {
+        eachPlayer += `
+        <tr>
+        <td class="first-row">
+          <a href=${each.Link}" target="_blank">${each.BATSMAN}</a>
+          <span class="wicket">${each.wicket}</span>
+        </td>
+        <td class="row-box">${each.R}</td>
+        <td class="row-box">${each.B}</td>
+        <td class="row-box">${each['4s']}</td>
+        <td class="row-box">${each['6s']}</td>
+        <td class="row-box">${Math.round((each.R / each.B) * 100)}</td>
+        </tr>
+        `
+      });
+      playersTable.innerHTML = eachPlayer;
+  }
+  </script>
+
+</html>
