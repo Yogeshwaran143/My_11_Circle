@@ -13,7 +13,7 @@ h2{
 }
 
 hr {
-    color: rgb(241, 22, 95);
+    color: rgb(255, 0, 85);
     width: 50%;
 }
 
@@ -29,7 +29,7 @@ th,td {
 .table{
     margin: 0; 
     border:1px;
-    width: 60%;
+    width: 45%;
     margin-top: -10px;
 }
 
@@ -39,7 +39,8 @@ th,td {
 }
 
 .wicket{
-    text-align: left;
+    color: grey;
+    font-size: small;
 }
 
 .row-box{
